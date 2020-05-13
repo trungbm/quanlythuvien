@@ -1,0 +1,51 @@
+﻿@model ThuVien.Models.LoaiSach
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>LoaiSach</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaLoaiSach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaLoaiSach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenLoaiSach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLoaiSach)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeUpdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeUpdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeCreate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeCreate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

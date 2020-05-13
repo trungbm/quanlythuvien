@@ -1,0 +1,67 @@
+﻿@model ThuVien.Models.ViTri
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ViTri</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaViTri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaViTri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ngan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ke)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ke)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeUpdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeUpdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeCreate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeCreate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Khu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Khu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

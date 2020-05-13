@@ -1,0 +1,76 @@
+﻿@model IEnumerable<ThuVien.Models.PhieuMuon>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SinhVien.MaSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaMuon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayMuon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayTra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HinhThuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeUpdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeCreate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoNgayMuon)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SinhVien.MaSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaMuon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayMuon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayTra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HinhThuc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeUpdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeCreate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoNgayMuon)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

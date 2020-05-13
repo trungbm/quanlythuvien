@@ -1,0 +1,83 @@
+﻿@model ThuVien.Models.PhieuMuon
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PhieuMuon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SinhVien.MaSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SinhVien.MaSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaMuon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaMuon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayMuon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayMuon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayTra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayTra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhThuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HinhThuc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeUpdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeUpdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeCreate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeCreate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoNgayMuon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoNgayMuon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

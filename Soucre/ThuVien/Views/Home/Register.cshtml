@@ -1,0 +1,63 @@
+﻿@model ThuVien.Models.User
+@{
+    ViewBag.Title = "Đăng kí";
+    Layout = "~/Views/Shared/_Login.cshtml";
+    //Layout = null;
+}
+@using (Html.BeginForm("Register", "Home", FormMethod.Post, new { @class = "login100-form validate-form" }))
+{
+    @Html.AntiForgeryToken()
+    <span class="login100-form-title">
+        Đăng kí tài khoản mới
+    </span>
+
+    <div class="wrap-input100 validate-input">
+        @Html.TextBoxFor(m => m.Name, "", new { @class = "input100", @placeholder = "Tên" })
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </span>
+    </div>
+    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+        @Html.TextBoxFor(m => m.Email, "", new { @class = "input100", @placeholder = "Email" })
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </span>
+    </div>
+    <div class="wrap-input100 validate-input">
+        @Html.TextBoxFor(m => m.Username, "", new { @class = "input100", @placeholder = "Tên tài khoản" })
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </span>
+    </div>
+
+    <div class="wrap-input100 validate-input" data-validate="Password is required">
+        @Html.PasswordFor(m => m.Password, new { @class = "input100", @placeholder = "Mật khẩu" })
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+        </span>
+    </div>
+    <div class="wrap-input100 validate-input" data-validate="Password is required">
+        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "input100", @placeholder = "Nhập lại Mật khẩu" })
+        <span class="focus-input100"></span>
+        <span class="symbol-input100">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+        </span>
+    </div>
+
+    <div class="container-login100-form-btn">
+        <button type="submit" class="login100-form-btn">
+            Đăng kí
+        </button>
+    </div>
+    <div class="text-center p-t-136">
+        <a class="txt2" href="/Home/Login">
+            Đã có tài khoản
+            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+        </a>
+    </div>
+}
+

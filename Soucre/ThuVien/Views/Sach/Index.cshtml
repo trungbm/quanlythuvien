@@ -1,0 +1,100 @@
+﻿@model IEnumerable<ThuVien.Models.Sach>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiSach1.MaLoaiSach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NXB1.MaNXB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhieuMuon.MaMuon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TacGia1.MaTacGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ViTri1.MaViTri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NamXB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgonNgu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeCreate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeUpdate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiSach1.MaLoaiSach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NXB1.MaNXB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhieuMuon.MaMuon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TacGia1.MaTacGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ViTri1.MaViTri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaSach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NamXB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgonNgu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeCreate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeUpdate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

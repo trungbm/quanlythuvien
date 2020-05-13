@@ -1,0 +1,64 @@
+﻿@model IEnumerable<ThuVien.Models.ViTri>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaViTri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ngan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ke)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeUpdate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeCreate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Khu)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaViTri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ke)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeUpdate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeCreate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Khu)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
